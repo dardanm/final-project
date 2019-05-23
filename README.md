@@ -1,4 +1,5 @@
 # final-project
+![Preview Image](src/assets/tlcdrivers-preview2.gif)
 
 ## Project setup
 ```
