@@ -29,12 +29,12 @@
         {{ result.other_requirements }}
       </div>
 
-      <br>
+    </div>
+
+         <br>
       Source: 
       <br>
       <a href='https://data.cityofnewyork.us/resource/dpec-ucu7.json' target="_blank">NYC Open Data</a>
-
-    </div>
   </div>
 </template>
 
