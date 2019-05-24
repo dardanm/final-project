@@ -30,7 +30,7 @@ export default {
   mounted() {
     axios
       .get(
-        "https://data.cityofnewyork.us/resource/dpec-ucu7.json?$select=status,%20count(*)%20group%20by%20status%20order%20by%20status&$limit=4"
+        "https://data.cityofnewyork.us/resource/dpec-ucu7.json?$select=status,%20count(*)%20group%20by%20status%20order%20by%20status&$limit=3"
       )
       .then(response => {
         this.result = response.data;
