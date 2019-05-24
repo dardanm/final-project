@@ -1,23 +1,26 @@
 <template>
   <div id="app">
-    <search></search> 
+    <Cards></Cards>
+    <search></search>
   </div>
 </template>
 
 <script>
-  import Search from './components/Search'
+import Cards from "./components/Cards";
+import Search from "./components/Search";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
-    Search
+    Search,
+    Cards
   }
-}
+};
 </script>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
