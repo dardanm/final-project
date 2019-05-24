@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTT-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Final Project</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+    <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a class="active" href="#home">Home</a></li>
+            <li><a href="">Contact</a></li>
+            <li><a href="">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="slide">
+        <div class="slide-container">
+            <img class="mySlides" src="SlideShow/1.jpg">
+            <img class="mySlides" src="SlideShow/2.jpg">
+            <img class="mySlides" src="SlideShow/3.jpg">
+            <img class="mySlides" src="SlideShow/4.jpg">
+
+        </div>
+    </div>
+
+    <div id="a2">
+
+        <div class="search">
+            
+            <h1>TLC New Driver Application <br> Status Checker</h1>
+            <h2>Enter Application Number</h2>
+            <form v-on:submit.prevent="getResult(query)">
+                <input type="number" placeholder="Enter numbers..." v-model="query" />
+                <button class="foo-button mdc-button mdc-button--raised">Enter</button>
+            </form>
+
+            <div v-if="results">
+
+                <div v-for="result in results">
+                    <br>
+                    <strong>Application No:</strong> {{ result.app_no }}
+                    <br>
+                    <strong>Current Status:</strong> {{ result.status }}
+                    <br>
+                    <strong>Drug Test:</strong> {{ result.drug_test }}
+                    <br>
+                    <strong>Wav Course:</strong> {{ result.wav_course }}
+                    <br>
+                    <strong>Defensive Driving:</strong> {{ result.defensive_driving }}
+                    <br>
+                    <strong>Driver Exam:</strong> {{ result.driver_exam }}
+                    <br>
+                    <strong>Medical Clearance:</strong> {{ result.medical_clearance_form }}
+                    <br>
+                    <strong>Other Requirements:</strong>
+                    <br>
+                    {{ result.other_requirements }}
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="app">
+
+        <p>{{ letter }}</p>
+
+    </div>
+
+    <div>
+        <h4>Source:</h4>
+        <a href='https://data.cityofnewyork.us/resource/dpec-ucu7.json' target="_blank">NYC Open Data</a>
+        <hr>
+    </div>
+    <!--Footer-->
+    <footer class="footer">
+        &copy; 2019 TLC CHECKER | All Rights Reserved.
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify/dist/vuetify.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
