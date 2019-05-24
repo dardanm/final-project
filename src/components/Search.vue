@@ -26,14 +26,11 @@
         <br>
         <strong>Other Requirements:</strong> 
         <br>
-        {{ result.other_requirements }}
-        
-        </div>
-        
-        <div v-else="no data"> Not found </div>
-      
+        {{ result.other_requirements }}      
 
     </div>
+    </div>
+
 
          <br>
       Source: 
