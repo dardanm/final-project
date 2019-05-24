@@ -1,6 +1,5 @@
 <template>
   <div class="search">
-    <h1>TLC New Driver Application <br> Status Checker</h1> 
     <h2>Enter Application Number</h2>
     <form v-on:submit.prevent="getResult(query)">
       <input type="text" placeholder="Enter numbers..." v-model="query" />
@@ -54,7 +53,6 @@ export default {
     getResult(query) {
       axios.get('https://data.cityofnewyork.us/resource/dpec-ucu7.json?app_no='+query)
       .then( respone => {
-        // console.log(respone.data);
         this.results = respone.data;
       })
     }
@@ -77,5 +75,8 @@ li {
 }
 a {
   color: #42b983;
+}
+input {
+  max-width: 50%;
 }
 </style>

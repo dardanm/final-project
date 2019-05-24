@@ -1,5 +1,7 @@
 <template>
   <div class="row">
+        <h1>TLC New Driver Application <br> Status Checker</h1> 
+
     <!-- Approved -->
     <div v-for="item in result" class="col s12 m6 l6 xl3">
       <div class="card green-teal gradient-shadow white-text animate fadeLeft">
