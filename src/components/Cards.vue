@@ -1,6 +1,6 @@
 <template>
   <div class="row">
-        <h1>TLC New Driver Application <br> Status Checker</h1> 
+        <h4>TLC New Driver Application <br> Status Checker</h4> 
 
     <!-- Approved -->
     <div v-for="item in result" class="col s12 m6 l6 xl3">

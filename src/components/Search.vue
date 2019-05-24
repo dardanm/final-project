@@ -1,8 +1,8 @@
 <template>
   <div class="search">
-    <h2>Enter Application Number</h2>
+    <h5>Check Status:</h5>
     <form v-on:submit.prevent="getResult(query)">
-      <input type="text" placeholder="Enter numbers..." v-model="query" />
+      <input type="text" placeholder="Enter application number..." v-model="query" />
     </form>
 
     <div v-if="results">
