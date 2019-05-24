@@ -23,11 +23,16 @@ nav li a{
 
 }
 nav li:hover{
-    background-color: #E5FCFF;
+    background-color: rgb(110, 38, 204);
+    
+}
+nav a:hover{
+    color: rgb(233, 233, 233);
+
 }
 .active{
-    background-color: #ABDAFC;
-    color: #000;
+    background-color: rgb(100, 75, 192);
+    color: rgb(233, 233, 233);
 }
 
 /*-------------------------------------*/
@@ -60,6 +65,7 @@ nav li:hover{
       width: 200px;
       height: 30px;
       text-align: center;
+      font-size: 26px;
   }
 .slide{
 

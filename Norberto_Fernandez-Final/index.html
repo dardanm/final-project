@@ -35,17 +35,20 @@
     <div id="a2">
 
         <div class="search">
-            
+
             <h1>TLC New Driver Application <br> Status Checker</h1>
             <h2>Enter Application Number</h2>
             <form v-on:submit.prevent="getResult(query)">
-                <input type="number" placeholder="Enter numbers..." v-model="query" />
+                <input type="number" id="myInput" placeholder="Enter numbers..." v-model="query" required>
                 <button class="foo-button mdc-button mdc-button--raised">Enter</button>
             </form>
 
+           
+            </div>
             <div v-if="results">
 
                 <div v-for="result in results">
+                       
                     <br>
                     <strong>Application No:</strong> {{ result.app_no }}
                     <br>
@@ -72,7 +75,6 @@
         </div>
 
     </div>
-
 
 
 
