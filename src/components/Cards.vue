@@ -5,9 +5,8 @@
     <!-- Approved -->
     <div v-for="item in result" class="col s12 m6 l6 xl3">
       <div class="card green-teal gradient-shadow white-text animate fadeLeft">
-        <div class="padding-4">
-          <div class="col s7 m7">
-            <i class="material-icons background-round mt-5">done</i>
+        <div>
+          <div class="col s7 m7 left-align">
             <p>{{ item.status }}</p>
           </div>
           <div class="col s5 m5 right-align">
