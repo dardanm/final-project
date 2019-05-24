@@ -1,5 +1,6 @@
 <template>
   <div class="row">
+    
         <h4>TLC New Driver Application <br> Status Checker</h4> 
 
     <!-- Approved -->

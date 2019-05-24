@@ -9,6 +9,12 @@
 import Cards from "./components/Cards";
 import Search from "./components/Search";
 
+import Vue from "vue";
+import VueMaterial from "vue-material";
+import "vue-material/dist/vue-material.min.css";
+
+Vue.use(VueMaterial);
+
 export default {
   name: "app",
   components: {
@@ -25,7 +31,5 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-  margin: 10%;
 }
 </style>
