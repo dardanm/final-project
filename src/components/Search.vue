@@ -33,9 +33,11 @@
         <br>
         <strong>Other Requirements: </strong>
         <br>
-        {{ result.other_requirements }}
-      </div>
+        {{ result.other_requirements }}      
+
     </div>
+    </div>
+
 
     <br>Source:
     <br>
