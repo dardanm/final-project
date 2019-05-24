@@ -1,26 +1,22 @@
 console.log("im hook");
 
-var app = new Vue({
-    el: '#app',
-    data:{
-        letter: "Add something"
-    }
-   
-})
-
 
 mdc.ripple.MDCRipple.attachTo(document.querySelector('.foo-button'));
 
 //import axios from 'axios';
 
-var app2 = new Vue({
-    el:'#a2',
+var app = new Vue({
+    el:'#app',
   name: 'search',
+  
   data() {
     return {
       msg: 'Search',
       query: '',
-      results: ''
+      results: '',
+      pNotFound: 'The number entered is not found!',
+      tryA: 'Try again',
+      notFound: false
      
     }
   }, 
@@ -31,10 +27,11 @@ var app2 = new Vue({
          console.log(response.data);
          if(response.data == [].length == 1)
          {
-            alert("Application Number not Found!");
-
+            //alert("Application Number not Found!");
+            this.notFound = true;
          }else
          {
+            this. notFound = false;
             this.results = response.data;
          }
         

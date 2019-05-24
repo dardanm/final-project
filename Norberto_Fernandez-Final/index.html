@@ -32,7 +32,7 @@
         </div>
     </div>
 
-    <div id="a2">
+    <div id="app">
 
         <div class="search">
 
@@ -43,55 +43,62 @@
                 <button class="foo-button mdc-button mdc-button--raised">Enter</button>
             </form>
 
-           
-            </div>
-            <div v-if="results">
-
-                <div v-for="result in results">
-                       
-                    <br>
-                    <strong>Application No:</strong> {{ result.app_no }}
-                    <br>
-                    <strong>Current Status:</strong> {{ result.status }}
-                    <br>
-                    <strong>Drug Test:</strong> {{ result.drug_test }}
-                    <br>
-                    <strong>Wav Course:</strong> {{ result.wav_course }}
-                    <br>
-                    <strong>Defensive Driving:</strong> {{ result.defensive_driving }}
-                    <br>
-                    <strong>Driver Exam:</strong> {{ result.driver_exam }}
-                    <br>
-                    <strong>Medical Clearance:</strong> {{ result.medical_clearance_form }}
-                    <br>
-                    <strong>Other Requirements:</strong>
-                    <br>
-                    {{ result.other_requirements }}
-                </div>
-
-            </div>
-
 
         </div>
 
+        <div v-for="result in results" class="succ">
+
+                <v-alert :value="true" type="success" class="red">
+                    Success
+                </v-alert>
+            <br>
+            <strong>Application No:</strong> {{ result.app_no }}
+            <br>
+            <strong>Current Status:</strong> {{ result.status }}
+            <br>
+            <strong>Drug Test:</strong> {{ result.drug_test }}
+            <br>
+            <strong>Wav Course:</strong> {{ result.wav_course }}
+            <br>
+            <strong>Defensive Driving:</strong> {{ result.defensive_driving }}
+            <br>
+            <strong>Driver Exam:</strong> {{ result.driver_exam }}
+            <br>
+            <strong>Medical Clearance:</strong> {{ result.medical_clearance_form }}
+            <br>
+            <strong>Other Requirements:</strong>
+            <br>
+            {{ result.other_requirements }}
+        </div>
+
+
+        <div v-show="notFound">
+
+            <v-app id="inspire">
+                <div >
+                    <v-alert :value="true" type="error" class="red">
+                        {{ pNotFound }} <br><br>
+                        <strong>{{ tryA }}</strong> 
+                    </v-alert>
+                </div>
+            </v-app>
+
+        </div>
+
+
     </div>
 
-
-
-    <div id="app">
-
-        <p>{{ letter }}</p>
-
     </div>
-
-    <div>
-        <h4>Source:</h4>
-        <a href='https://data.cityofnewyork.us/resource/dpec-ucu7.json' target="_blank">NYC Open Data</a>
-        <hr>
-    </div>
+    <hr>
+   
     <!--Footer-->
     <footer class="footer">
         &copy; 2019 TLC CHECKER | All Rights Reserved.
+        <div>
+        <h4>Source:</h4>
+        <a href='https://data.cityofnewyork.us/resource/dpec-ucu7.json' target="_blank">NYC Open Data</a>
+    </div>  
+     
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
