@@ -27,6 +27,8 @@
         <strong>Other Requirements:</strong> 
         <br>
         {{ result.other_requirements }}
+        
+        <div v-else-if="digit <=6 && digit > 11"> Not found </div>
       </div>
 
     </div>
