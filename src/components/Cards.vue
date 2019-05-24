@@ -1,7 +1,12 @@
 <template>
   <div class="row">
-    
-        <h4>TLC New Driver Application <br> Status Checker</h4> 
+        <md-toolbar>
+      <h3 class="md-title" style="flex: 1; text-align:left;">TLC New Driver Application -  
+Status Checker</h3>
+      <md-button class="md-icon-button">
+        <md-icon>more_vert</md-icon>
+      </md-button>
+    </md-toolbar>
 
     <!-- Approved -->
     <div v-for="item in result" class="col s12 m6 l6 xl3">
